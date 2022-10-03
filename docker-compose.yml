@@ -1,0 +1,12 @@
+version: "2.0"
+services:
+
+  website:
+    container_name: "website"
+    image: node
+    command: "/app/runincontainer.sh"
+    working_dir: /app
+    ports:
+      - "4090:5173"
+    volumes:
+      - "/opt/projects/bootladder-vite/frontend:/app"

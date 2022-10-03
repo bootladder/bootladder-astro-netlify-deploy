@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "node server",
     "build": "vite build",
     "preview": "vite preview --port 4173"
   },

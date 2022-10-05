@@ -1,7 +1,7 @@
 export const SITE = {
 	name: 'AstroWind',
 
-	origin: 'https://bootladder.com/astro',
+	origin: 'https://bootladder.com/',
 	basePathname: '/',
 
 	title: 'Bootladder Engineering',

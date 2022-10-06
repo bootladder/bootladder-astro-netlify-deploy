@@ -1,16 +1,17 @@
 ---
-pubDate: "Aug 08 2022"
-title: "AstroWind template in depth"
-description: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
-image: "~/assets/images/hero.jpg"
-category: "Tutorials"
-tags: [astro, tailwind css, front-end]
-layout: ../layouts/PageLayout.astro
+import Picture from '~/components/core/Picture.astro';
 ---
 
 
 
-<div> <img src="src/assets/images/stevephoto.jpeg"/></div>
+<div> </div>
+			<Picture
+				src={import('~/assets/images/stevephoto.jpeg')}
+				widths={[400, 768]}
+				sizes="(max-width: 768px) 100vw, 432px"
+				alt="Astronaut"
+				aspectRatio="432:768"
+			/>
 
 ## My name is Steve Anderson.
 

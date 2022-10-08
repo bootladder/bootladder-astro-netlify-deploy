@@ -1,32 +1,23 @@
 ---
-import Picture from '~/components/core/Picture.astro';
----
-<div class="w-full lg:w-1/2 px-0 sm:px-8">
-    <div> blah</div>
-    <Picture
-    src={import('~/assets/images/rackphoto.jpg')}
-    widths={[400, 768]}
-    sizes="(max-width: 768px) 100vw, 432px"
-    alt="Astronaut"
-    aspectRatio="432:768"
-    />
-
-    <Picture
-    src={import('~/assets/images/firmwaredevscreen.png')}
-    widths={[400, 768]}
-    sizes="(max-width: 768px) 100vw, 432px"
-    alt="Astronaut"
-    aspectRatio="432:768"
-    />
-    
-    <Picture
-    src={import('~/assets/images/labphoto.jpg')}
-    widths={[400, 768]}
-    sizes="(max-width: 768px) 100vw, 432px"
-    alt="Astronaut"
-    aspectRatio="432:768"
-    />
-				
+let rackphoto = await import('~/assets/images/rackphoto.jpg')
+let firmwaredevscreen = await import('~/assets/images/firmwaredevscreen.png')
+let labphoto = await import('~/assets/images/labphoto.jpg')
+--- 
+<div class="w-full">
+    <div class="flex flex-row">
+        <img
+        src={rackphoto.default.src}
+        style="width:200px;height:auto"
+        />
+        <img
+        src={firmwaredevscreen.default.src}
+        style="width:200px;height:auto"
+        />
+        <img
+        src={labphoto.default.src}
+        style="width:200px;height:auto"
+        />
+    </div>
     <ul class="space-y-12">
         <li class="flex md:-mx-4">
             <div class="pr-4 sm:pl-4">

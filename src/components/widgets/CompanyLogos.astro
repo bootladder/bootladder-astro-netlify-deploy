@@ -1,41 +1,33 @@
 ---
 import Picture from '~/components/core/Picture.astro';
+let tdglogo = await import('~/assets/images/TDGLogo-1-768x469.png')
+let fordlogo = await import('~/assets/images/Ford_logo_flat.svg-1536x589.png')
+let kinoologo = await import('~/assets/images/kinoo-logo-hq-300x140.png')
+let resideologo = await import('~/assets/images/Resideo-360x240.webp')
+
+
 ---
 
 <div class="px-4 py-8 md:py-16 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-6xl">
 	<div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
-		<div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
-			<Picture
-				src={import('~/assets/images/TDGLogo-1-768x469.png')}
-				widths={[200]}
-			/>
-		</div>
-		<div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
-			<Picture
-				src={import('~/assets/images/Ford_logo_flat.svg-1536x589.png')}
-				widths={[100, 100]}
-				sizes="(max-width: 768px) 100vw, 432px"
-				alt="Astronaut"
-				aspectRatio="432:768"
-			/>
-		</div>
-		<div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
-			<Picture
-				src={import('~/assets/images/kinoo-logo-hq-300x140.png')}
-				widths={[400, 768]}
-				sizes="(max-width: 768px) 100vw, 432px"
-				alt="Astronaut"
-				aspectRatio="432:768"
-			/>
-		</div>
-		<div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
-			<Picture
-				src={import('~/assets/images/Resideo-360x240.webp')}
-				widths={[400, 768]}
-				sizes="(max-width: 768px) 100vw, 432px"
-				alt="Astronaut"
-				aspectRatio="432:768"
-			/>
-		</div>
+        <img
+        src={tdglogo.default.src} 
+        style="width:400px;height:auto"
+        />
+        <img
+        src={fordlogo.default.src} 
+        style="width:100px;height:auto"
+		class="border-r"
+        />
+        <img
+        src={kinoologo.default.src} 
+        style="width:100px;height:auto"
+		class="border-r"
+        />
+        <img
+        src={resideologo.default.src} 
+        style="width:100px;height:auto"
+		class="border-r"
+        />
 	</div>
 </div>

@@ -2,11 +2,9 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import CardGrid from '~/components/widgets/CardGrid.astro';
-import BigBullets from '~/components/widgets/BigBullets.astro';
-import Steps from '~/components/widgets/Steps.astro';
+import SuccessfulIoTProducts from '~/components/widgets/SuccessfulIoTProducts.astro';
+import WhatWeWorkOn from '~/components/widgets/WhatWeWorkOn.astro';
 import Testimonial from '~/components/widgets/Testimonial.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import CompanyLogos from '~/components/widgets/CompanyLogos.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import BigList from '~/components/widgets/BigList.astro';
@@ -19,13 +17,10 @@ const meta = {
 
 <Layout {meta}>
 	<Hero />
-	<CardGrid />
-	<BigBullets />
+	<SuccessfulIoTProducts />
+	<WhatWeWorkOn />
 	<Testimonial />
 	<CompanyLogos />
 	<BigList />
-	<!-- <HighlightedPosts /> -->
-	<!-- <FAQs /> -->
-	<!-- <Steps /> -->
 	<CallToAction />
 </Layout>

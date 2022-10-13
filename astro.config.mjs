@@ -6,7 +6,6 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import image from '@astrojs/image';
-import partytown from '@astrojs/partytown';
 
 export const SITE = {
 	name: 'AstroWind',
@@ -17,8 +16,6 @@ export const SITE = {
 	title: 'Bootladder Engineering',
 	description: 'Firmware for the 21st Century',
 
-	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
 };
 
 
@@ -41,10 +38,6 @@ export default defineConfig({
 		sitemap(),
 		image(),
 
-		/* Disable this integration if you don't use Google Analytics (or other external script). */
-		partytown({
-			config: { forward: ['dataLayer.push'] },
-		}),
 	],
 
 	vite: {

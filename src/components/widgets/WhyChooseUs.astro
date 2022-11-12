@@ -1,0 +1,109 @@
+---
+import { Icon } from 'astro-icon';
+
+const items = [
+	{
+		title: 'Software that Targets Hardware',
+		description:
+			'You need a software engineer with an EE degree.',
+		icon: 'flat-color-icons:home',
+	},
+	{
+		title: 'Automation that Targets your Domain',
+		description:
+			'The automation industry, mechanical all the way to IT, does not customize.  Customization is the extent of combining their canned sub-solutions',
+		icon: 'flat-color-icons:home',
+	},
+	{
+		title: 'Your domain is too specific to find a solution provider',
+		description:
+			'The more a candidate knows your domain, the less they can solve your problem',
+		icon: 'flat-color-icons:faq',
+	},
+	{
+		title: 'Your domain is information-heavy',
+		description:
+			'1000 page documentation is par for the course with our clients',
+		icon: 'flat-color-icons:faq',
+	},
+	{
+		title: 'Your domain is high tech',
+		description:
+			'Almost all of your individual contributors have a degree.  This is not brick and mortar business.',
+		icon: 'flat-color-icons:faq',
+	},
+	{
+		title: 'Your problem is difficult',
+		description:
+			'If it was easy, you would attempt it with your available resources.',
+		icon: 'flat-color-icons:faq',
+	},
+	{
+		title: 'Care and TLC always trumps domain expertise',
+		description:
+			"If your solution provider doesnt follow through, you will waste a massive investment.",
+		icon: 'flat-color-icons:video-projector',
+	},
+	{
+		title: 'You dont have a team for this problem.  You need one person to take care of it',
+		description:
+			"You have a problem, and you need a solution.  None of your managers can manage the project.",
+		icon: 'flat-color-icons:video-projector',
+	},
+	{
+		title: 'Your problem has a wide scope',
+		description:
+			"Your problem has such a wide scope, it is strange to describe the ideal candidate. \
+        As you get more specific, you realize you will never find such a person",
+		icon: 'flat-color-icons:video-projector',
+	},
+	{
+		title: 'The solution is for your people',
+		description: "You want to use the solution.  See it.  Interact with it.  Give it to someone.  \
+      Not something under the hood.",
+		icon: 'flat-color-icons:video-projector',
+	},
+	{
+		title: 'You want a result.  Not an employee',
+		description: "",
+		icon: 'flat-color-icons:video-projector',
+	},
+	{
+		title: "You can talk about your solution but you can't get it done",
+		description: "",
+		icon: 'flat-color-icons:video-projector',
+	},
+	{
+		title: "You have legacy tech and greenfield tech",
+		description: "You have taken the business this far.  But you have reached a limit.  You need new tech, but just the minimum, and it has to play nice",
+		icon: 'flat-color-icons:video-projector',
+	},
+];
+---
+
+<section class="relative">
+	<div class="absolute inset-0 bg-primary-50 dark:bg-slate-800 pointer-events-none mb-32" aria-hidden="true"></div>
+	<div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+			<div class="mb-8 text-center">
+				<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+					Why Choose Us?
+				</h2>
+			</div>
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-12 dark:text-white">
+				{
+					items.map(({ title, description, icon }) => (
+						<div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition dark:border dark:border-slate-800">
+							<div class="flex items-center mb-4">
+								<Icon name={icon} class="w-12 h-12" />
+
+								<div class="ml-4 text-xl font-bold">{title}</div>
+							</div>
+							<p class="text-gray-500 dark:text-gray-400 text-md">{description}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

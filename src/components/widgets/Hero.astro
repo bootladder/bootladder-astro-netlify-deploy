@@ -1,15 +1,17 @@
 ---
+let banner = await import('~/assets/images/banner.svg')
+
 ---
 
 <section>
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="py-12 md:py-20">
 			<div class="text-center pb-10 md:pb-16">
-				<h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
-					Firmware for the 
-					<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">21st</span> 
-						Century
-				</h1>
+                <div class="bg-[#181818]">
+                    <image
+                    src={banner.default}
+                    />
+                </div>
 				<div class="max-w-3xl mx-auto">
 					<p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
 						We help IoT companies, from hardware to the cloud

@@ -1,5 +1,8 @@
 ---
 import { Icon } from 'astro-icon';
+let globesquiggle = await import('~/assets/images/globesquiggle.svg')
+let labsquiggle = await import('~/assets/images/labsquiggle.svg')
+let brainsquiggle = await import('~/assets/images/brainsquiggle.svg')
 
 const items = [
 	{
@@ -7,18 +10,22 @@ const items = [
 		description:
 			'The gap between embedded and server-based software development is near zero. We develop firmware with state-of-the-art software engineering practices, built on top of a traditional electrical engineering background',
 		icon: 'flat-color-icons:home',
+		imgsrc: globesquiggle.default,
+
 	},
 	{
-		title: 'Testing Testing Testing!',
+		title: 'Testing Testing Testing',
 		description:
 			'The ability to adapt and pivot ultimately boils down to how much automated test coverage there is. Automated testing and pipelining at all levels from unit to end-to-end is paramount',
 		icon: 'flat-color-icons:faq',
+		imgsrc: labsquiggle.default,
 	},
 	{
 		title: 'Product First Mindset',
 		description:
 			'Firmware is no longer a siloed component. The Internet of Things (IoT) has brought all aspects of product development into the realm of firmware. Firmware is our specialty but our mindset is always product-wide, product-first.',
 		icon: 'flat-color-icons:video-projector',
+		imgsrc: brainsquiggle.default,
 	},
 ];
 ---
@@ -37,14 +44,15 @@ const items = [
 			</div>
 			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-12 dark:text-white">
 				{
-					items.map(({ title, description, icon }) => (
-						<div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition dark:border dark:border-slate-800">
-							<div class="flex items-center mb-4">
-								<Icon name={icon} class="w-12 h-12" />
-
-								<div class="ml-4 text-xl font-bold">{title}</div>
+					items.map(({ title, description, icon,imgsrc }) => (
+						<div class="relative flex flex-col p-6 bg-[#181818] rounded transition ">
+							<div class="flex justify-center mb-4">
+								<image src={imgsrc} class="w-24 h-24" />
 							</div>
-							<p class="text-gray-500 dark:text-gray-400 text-md">{description}</p>
+							<div class="flex items-center mb-4">
+								<div class="ml-4 text-[32px] font-bold text-[#F5F5F5]">{title}</div>
+							</div>
+							<p class="text-gray-500 text-md px-6">{description}</p>
 						</div>
 					))
 				}

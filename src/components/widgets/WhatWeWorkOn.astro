@@ -32,41 +32,19 @@ We will enable your product's transition to mass production and beyond, making s
             </div>
             <div class="mb-4">
                 <h2 class="text-[#F5F5F5] text-6xl font-bold mb-4 font-heading">
-                    What we  <span
-                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500 whitespace-nowrap"
-                        >work </span
-                    > on
+                    What We Work On 
                 </h2>
             </div>
 		</div>
-			<p class="max-w-3xl mx-auto sm:text-center text-xl text-gray-600 dark:text-slate-400">
-				Hire us.  Use our apps. Buy our services. License our tech.
-			</p>
 		<div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
 			{
 				items.map((subitems) => (
 					<div class="space-y-8 sm:px-8">
 						{subitems.map(({ title, description }) => (
 							<div class="flex flex-row max-w-md">
-								<div class="mb-4 mr-4">
-									<div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-500">
-										<svg class="w-12 h-12 p-0.5" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-											<g fill="none" fill-rule="evenodd">
-												<rect class="fill-current text-primary-600" width="64" height="64" rx="32" />
-												<g stroke-linecap="square" stroke-width="2">
-													<path class="stroke-current text-white" d="M20.571 20.571h13.714v17.143H20.571z" />
-													<path
-														class="stroke-current text-primary-300"
-														d="M38.858 26.993l6.397 1.73-4.473 16.549-13.24-3.58"
-													/>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
 								<div>
-									<h3 class="mb-3 text-[#F5F5F5] text-xl font-bold">{title}</h3>
-									<p class=" text-[#F5F5F5]" >{description}</p>
+									<h3 class="mb-3 text-[#dfdfdf] text-2xl font-bold">{title}</h3>
+									<p class=" text-gray-500" >{description}</p>
 								</div>
 							</div>
 						))}

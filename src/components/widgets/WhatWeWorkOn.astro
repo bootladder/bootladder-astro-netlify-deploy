@@ -1,4 +1,6 @@
 ---
+let hammersquiggle = await import('~/assets/images/hammersquiggle.svg')
+
 const items = [
 	[
 		{
@@ -23,18 +25,23 @@ We will enable your product's transition to mass production and beyond, making s
 ---
 
 <section class="scroll-mt-16" id="features">
-	<div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20 bg-primary-50 dark:bg-slate-800">
-		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-			<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
-				What we  <span
-					class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500 whitespace-nowrap"
-					>work </span
-				> on
-			</h2>
+	<div class="px-4 py-16 mx-auto max-w-6xl ">
+		<div class=" mb-10 flex flex-row ">
+            <div class="mb-4 mr-12">
+                <image src={hammersquiggle.default} class="w-24 h-24" />
+            </div>
+            <div class="mb-4">
+                <h2 class="text-[#F5F5F5] text-6xl font-bold mb-4 font-heading">
+                    What we  <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500 whitespace-nowrap"
+                        >work </span
+                    > on
+                </h2>
+            </div>
+		</div>
 			<p class="max-w-3xl mx-auto sm:text-center text-xl text-gray-600 dark:text-slate-400">
 				Hire us.  Use our apps. Buy our services. License our tech.
 			</p>
-		</div>
 		<div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
 			{
 				items.map((subitems) => (
@@ -58,8 +65,8 @@ We will enable your product's transition to mass production and beyond, making s
 									</div>
 								</div>
 								<div>
-									<h3 class="mb-3 text-xl font-bold">{title}</h3>
-									<p>{description}</p>
+									<h3 class="mb-3 text-[#F5F5F5] text-xl font-bold">{title}</h3>
+									<p class=" text-[#F5F5F5]" >{description}</p>
 								</div>
 							</div>
 						))}

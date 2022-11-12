@@ -1,5 +1,6 @@
 ---
 let banner = await import('~/assets/images/banner.svg')
+let herobackground = await import('~/assets/images/herobackground.png')
 
 ---
 
@@ -17,9 +18,12 @@ let banner = await import('~/assets/images/banner.svg')
 						We Help IoT Companies, From Hardware To The Cloud
 					</h1>
 					<div class="max-w-none px-6 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-						<div class="flex w-full sm:w-auto">
+						<div class="relative w-full sm:w-auto">
+                            <image class="w-full"
+                            src={herobackground.default.src}
+                            />
 							<a
-								class="btn text-white bg-gray-700 hover:bg-gray-800 w-full"
+								class="absolute top-1/2 left-1/4 btn  text-[30px] font-bold bg-[#181818] text-[#E85C5C] hover:bg-gray-800 "
 								href="#features">Let's Talk Shop</a
 							>
 						</div>

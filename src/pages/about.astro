@@ -1,4 +1,85 @@
 ---
+import Layout from '~/layouts/PageLayout.astro';
+let stevephoto = await import('~/assets/images/stevephoto.jpeg')
+
+
+const paragraph1 = 
+`
+   Bootladder's story begins in 2015 when I was the lead firmware developer for a large-scale wireless sensor network. During the course of the project, I realized that creating the new generation of IoT products was going to be difficult for the existing generation of firmware engineers. The biggest obstacles would be testing and adapting to shifting markets as well as rapidly iterating in response to feedback from the field. The software world has already overcome many of these challenges and fleshed out philosophies which meet these problems head on. I dedicated myself to repurposing the existing frameworks and knowledge used to facilitate rapid prototyping and efficient testing.
+`
+
+const paragraph2 = 
+`
+    Practically out of necessity during an extended global pandemic, I've reached a point where I believe these techniques are ready for production and formed a team to bring it to the world. Now we believe Testing of Things will be the antidote the industry didn't even realize it needed.
+`
+
+const paragraph3 = 
+`
+
+The typical job description for a firmware engineer has become unsuitable for handling the new generation of IoT devices from beta testing to mass production. In reality, the demands of this new generation of products requires a new outlook that we are test driving daily on our internal projects. We put our practices and ideals to the test on real-world product designs such as our MPD digital effect pedal to make sure that we're ready for everything life can throw at us.
+`
+
+const paragraphsteve = 
+`
+My name is Steve Anderson.
+
+I am a freelance embedded software engineer, specializing in firmware development and automated testing solutions.
+
+My background is in electrical engineering, and since then I've worked on everything between hardware and software.  That plus my passion for automated testing, gives me a unique set of skills and approach to creating embedded systems.
+
+My hobbies include customizing my GNU/Linux systems, writing software for myself, mechanical fabrication, creating music and musical instruments.
+
+ I work mostly with IoT companies.  If you are in one, let's talk!  Shoot me a message on social media.  My email address is my first name at the name of this site.
+
+Thank you for visiting, and best of luck with your projects!
+`
+
 ---
 
-Under construction.  Please feel free to reach out!
+<Layout>
+
+    <div class="relative px-4 ">
+        <div class="py-4 pt-8 ">
+            <div class="mb-8 text-center">
+                <h2 class="italic text-4xl text-[#F5F5F5]  font-['Open_Sans'] mb-4 ">
+                    Bootladder and the Origin of ToT
+                </h2>
+            </div>
+
+            <div class="aboutpageparagraphtext flex justify-center ">
+                <div class="w-[600px] indent-8 " >{paragraph1}</div>
+            </div>
+
+            <div class="aboutpageparagraphtext flex justify-center ">
+                <div class="w-[600px] indent-8 " >{paragraph2}</div>
+            </div>
+
+            <div class="aboutpageparagraphtext flex justify-center ">
+                <div class="w-[600px] indent-8 " >{paragraph3}</div>
+            </div>
+        </div>
+
+        <div class="py-4 pt-8 ">
+            <div class="mb-8 text-center">
+                <h2 class="italic text-4xl text-[#F5F5F5]  font-['Open_Sans'] mb-4 ">
+                    Who is Bootladder?
+                </h2>
+            </div>
+
+            <div class="aboutpageparagraphtext flex justify-center ">
+                <div class="m-2" > <img
+                src={stevephoto.default.src} 
+                style="width:200px;height:auto"
+                />
+                </div>
+
+                <div class="w-[600px] indent-8 " >{paragraphsteve}</div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</Layout>
+-->
